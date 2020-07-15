@@ -4,23 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="https://kit.fontawesome.com/911b6a4098.js" crossorigin="anonymous"></script>
     <title>대전 코로나 확진자</title>
   </head>
   <body>
-    <nav></nav>
-    <div id="map" style="width: 500px; height: 400px;"></div>
+    <div class="menu">
+      <div class="menu__logo"></div>
+      <div class="menu__list">
+        <li class="search">
+          <input type="checkbox" id="search__checkbox" />
+          <label for="search__checkbox">
+            <span class="icon"><i class="fas fa-search fa-2x"></i></span>
+            <p>주소 검색</p>
+          </label>
+          <ul class="search__content">
+            <li>주소 내용</li>
+          </ul>
+        </li>
+        <li class="people">
+          <input type="checkbox" id="people__checkbox" />
+          <label for="people__checkbox">
+            <span class="icon"><i class="fas fa-street-view fa-2x"></i></span>
+            <p>확진자 정보</p>
+          </label>
+          <ul class="people__content">
+            <li>확진자 내용 1</li>
+            <li>확진자 내용 2</li>
+            <li>확진자 내용 3</li>
+          </ul>
+        </li>
+        <li class="option">
+          <input type="checkbox" id="option__checkbox" />
+          <label for="option__checkbox">
+            <span class="icon"><i class="fas fa-cog fa-2x"></i></span>
+            <p>설정</p>
+          </label>
+          <ul class="option__content">
+            <li>설정 내용</li>
+          </ul>
+        </li>
+      </div>
+    </div>
+    <div class="map">
+      <div id="map" style="width: 500; height: 500px;"></div>
+    </div>
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6b02eed262926db60d747550ed222b70&libraries=services,clusterer,drawing"
     ></script>
-    <script>
-      var container = document.getElementById("map")
-      var options = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667),
-        level: 3,
-      }
-
-      var map = new kakao.maps.Map(container, options)
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>

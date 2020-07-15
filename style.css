@@ -1,2 +1,79 @@
-#map {
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+.menu {
+  width: 270px;
+  height: 80%;
+  background-color: #f0f0f0;
+  opacity: 100%;
+  position: fixed;
+  z-index: 9999;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.menu__list {
+  position: relative;
+  width: 260px;
+  height: 80%;
+  left: 5px;
+  top: 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.menu__list > li {
+  position: relative;
+  display: list-item;
+  justify-content: center;
+  background-color: #3396ff;
+  color: white;
+  font-family: "Jeju Gothic", sans-serif;
+  list-style: none;
+}
+
+.menu__list > li > label {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px 10px 0;
+  align-items: center;
+}
+
+.menu__list > li > label > span {
+  padding-right: 5px;
+}
+
+.menu__list > li > label:hover {
+  cursor: pointer;
+}
+
+.menu__list > li > ul {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+}
+
+.menu__list > li > ul > li {
+  padding: 20px;
+}
+
+.search__content,
+.people__content,
+.option__content {
+  display: none;
+}
+
+input[type="checkbox"] {
+  position: fixed;
+  left: -9999px;
+}
+
+#search__checkbox:checked ~ .search__content {
+  display: block;
+}
+
+#people__checkbox:checked ~ .people__content {
+  display: block;
+}
+
+#option__checkbox:checked ~ .option__content {
+  display: block;
 }
