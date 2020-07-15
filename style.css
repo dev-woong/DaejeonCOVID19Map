@@ -55,7 +55,9 @@
   padding: 20px;
 }
 
-.search__content,
+.search__content {
+  display: flex;
+}
 .people__content,
 .option__content {
   display: none;
@@ -67,7 +69,7 @@ input[type="checkbox"] {
 }
 
 #search__checkbox:checked ~ .search__content {
-  display: block;
+  display: none;
 }
 
 #people__checkbox:checked ~ .people__content {
@@ -76,4 +78,23 @@ input[type="checkbox"] {
 
 #option__checkbox:checked ~ .option__content {
   display: block;
+}
+
+.search__content input[type="text"] {
+  padding: 6px 0px 6px 6px;
+  margin: 8px 0px 8px 4px;
+  font-size: 17px;
+  border: none;
+  border-color: #3396ff;
+}
+
+.search__content button {
+  float: right;
+  padding: 6px 5px;
+  margin-top: 8px;
+  background: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: gray;
 }
