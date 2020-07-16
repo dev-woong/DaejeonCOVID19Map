@@ -91,21 +91,18 @@ document.getElementById("btnSearch").onclick = function () {
 $("#hideMenu__checkbox").change(function () {
   if ($("#hideMenu__checkbox").is(":checked")) {
     $("#search__checkbox").prop("checked", true)
-    $(".menu").css("-webkit-animation-name", "hideMenu")
     if (window.innerWidth > 768) {
-      $(".hideMenu").css("-webkit-animation-name", "bicScreenMoveLeftButton")
+      $(".menu").css("-webkit-animation-name", "bicScreenHideMenu")
     } else {
-      $(".hideMenu").css("-webkit-animation-name", "smallScreenMoveLeftButton")
+      $(".menu").css("-webkit-animation-name", "smallScreenHideMenu")
     }
-
-    console.log(window.innerWidth)
   } else {
     //   $(".s").css("-webkit-animation-name", "reverseDuration")
     $(".menu").css("-webkit-animation-name", "showMenu")
     if (window.innerWidth > 768) {
-      $(".hideMenu").css("-webkit-animation-name", "bicScreenMoveRightButton")
+      $(".menu").css("-webkit-animation-name", "bicScreenShowMenu")
     } else {
-      $(".hideMenu").css("-webkit-animation-name", "smallScreenMoveRightButton")
+      $(".menu").css("-webkit-animation-name", "smallScreenShowMenu")
     }
   }
 })
@@ -113,15 +110,18 @@ $("#hideMenu__checkbox").change(function () {
 
 $(function () {
   let data = jsonData.responseJSON
+  let reverseData = data.reverse()
 
   // 주소-좌표 변환 객체를 생성합니다
   let geocoder = new kakao.maps.services.Geocoder()
 
-  //확진자 번호
-  for (let i in data) {
+  for (let i in reverseData) {
     let elem = document.createElement("li")
     elem.innerHTML = data[i].confirmer + "번 " + data[i].place
     document.getElementsByClassName("people__content")[0].append(elem)
+  }
+  //확진자 번호
+  for (let i in data) {
     for (let j in data[i].route) {
       if (getPastTime(data[i].route[j].dateOfExposure[length + 1]) > 14) return false
       let circleColor = getCircleColor(data[i].route[j].dateOfExposure[length + 1])

@@ -12,6 +12,20 @@
   animation-fill-mode: both;
   animation-iteration-count: initial;
   animation-duration: 1s;
+  box-shadow: 10px 5px darkgray;
+}
+
+.menu:before {
+  content: "";
+  left: 100%;
+  top: 40%;
+  width: 20px;
+  height: 40px;
+  border-radius: 0px 40px 40px 0px;
+  background-color: #f0f0f0;
+  position: absolute;
+  box-shadow: 5px 1px darkgray;
+  cursor: pointer;
 }
 
 .menu__list {
@@ -62,9 +76,7 @@
 .search__content {
   display: flex;
 }
-/* .search__content {
-  display: none;
-} */
+
 .people__view,
 .option__content {
   display: none;
@@ -131,22 +143,18 @@ input[type="checkbox"] {
 }
 
 .hideMenu {
-  position: fixed;
-  left: 285px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 100%;
   top: 40%;
-  width: 30px;
-  height: 30px;
-  z-index: 9999;
-  animation-fill-mode: both;
-  animation-iteration-count: initial;
-  animation-duration: 1s;
 }
 
 .hideMenu label {
+  width: 50px;
+  height: 50px;
+  position: absolute;
   cursor: pointer;
-  display: flex;
-  padding: 10px 10px 10px 0px;
-  color: #0039cb;
 }
 
 .circleInfo {
@@ -226,9 +234,12 @@ input[type="checkbox"] {
     font-size: 12px;
   }
 
+  .menu__list > li ul > li {
+    padding: 15px;
+  }
+
   .hideMenu {
-    left: 185px;
-    cursor: pointer;
+    left: 170px;
   }
 
   .circleInfo {
@@ -255,54 +266,36 @@ input[type="checkbox"] {
   }
 }
 
-@-webkit-keyframes hideMenu {
+@-webkit-keyframes smallScreenHideMenu {
   from {
     left: 20px;
   }
   to {
-    left: -300px;
+    left: -170px;
   }
 }
 
-@-webkit-keyframes showMenu {
+@-webkit-keyframes smallScreenShowMenu {
   from {
-    left: -300px;
+    left: -170px;
   }
   to {
     left: 0px;
   }
 }
-
-@-webkit-keyframes bicScreenMoveLeftButton {
+@-webkit-keyframes bicScreenHideMenu {
   from {
-    left: 285px;
+    left: 20px;
   }
   to {
-    left: 0px;
+    left: -270px;
   }
 }
-@-webkit-keyframes smallScreenMoveLeftButton {
+@-webkit-keyframes bicScreenShowMenu {
   from {
-    left: 185px;
+    left: -270px;
   }
   to {
     left: 0px;
-  }
-}
-
-@-webkit-keyframes bicScreenMoveRightButton {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 285px;
-  }
-}
-@-webkit-keyframes smallScreenMoveRightButton {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 185px;
   }
 }
