@@ -213,6 +213,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 768px) {
   .menu {
     width: 170px;
+    margin: 5px;
   }
   .menu__list,
   .people__view,
@@ -268,7 +269,7 @@ input[type="checkbox"] {
 
 @-webkit-keyframes smallScreenHideMenu {
   from {
-    left: 20px;
+    left: 5px;
   }
   to {
     left: -170px;
