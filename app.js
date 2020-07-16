@@ -9,6 +9,9 @@ if (
 } else {
   dirJson = "/DeajeonCOVID19Map/data.json"
 }
+$.ajaxSetup({
+  async: false,
+})
 let jsonData = $.getJSON(dirJson, function (data) {
   return data
 })
@@ -88,19 +91,16 @@ document.getElementById("btnSearch").onclick = function () {
 
 $(function () {
   let data = jsonData.responseJSON
-  console.log("data :", data)
 
   // 주소-좌표 변환 객체를 생성합니다
   let geocoder = new kakao.maps.services.Geocoder()
 
   //확진자 번호
   for (let i in data) {
-    console.log("confirmer : ", data[i].confirmer)
     let elem = document.createElement("li")
     elem.innerHTML = data[i].confirmer + "번 " + data[i].place
     document.getElementsByClassName("people__content")[0].append(elem)
     for (let j in data[i].route) {
-      console.log("data.route[i] : ", data[i].route[j])
       if (getPastTime(data[i].route[j].dateOfExposure[length + 1]) > 14) return false
       let circleColor = getCircleColor(data[i].route[j].dateOfExposure[length + 1])
       // 주소로 좌표를 검색합니다
