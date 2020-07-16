@@ -45,20 +45,20 @@
   cursor: pointer;
 }
 
-.menu__list > li > ul {
+.menu__list > li ul {
   background-color: white;
   color: black;
   font-size: 18px;
 }
 
-.menu__list > li > ul > li {
+.menu__list > li ul > li {
   padding: 20px;
 }
 
 .search__content {
   display: flex;
 }
-.people__content,
+.people__view,
 .option__content {
   display: none;
   text-align: center;
@@ -73,7 +73,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-#people__checkbox:checked ~ .people__content {
+#people__checkbox:checked ~ .people__view {
   display: block;
 }
 
@@ -98,4 +98,80 @@ input[type="checkbox"] {
   border: none;
   cursor: pointer;
   color: gray;
+}
+
+.scrollBlind {
+  width: 260px;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: green;
+
+  /* 스크롤바 숨기기*/
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* 스크롤바 숨기기*/
+.scrollBlind::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.people__view {
+  width: 400px;
+  height: 300px;
+  /* position: absolute; */
+  overflow: hidden;
+}
+
+.circleInfo {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  width: 180px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: white;
+  z-index: 10000;
+  font-family: "Jeju Gothic", sans-serif;
+}
+
+.circleInfo > .explanation {
+  top: 10px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.circleInfo p {
+  color: black;
+  margin-top: 10px;
+}
+
+.circleInfo li {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.circleInfo li p {
+  margin: 0;
+}
+
+.circleInfo .circleColor {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.circleInfo #firstColor {
+  background-color: #ef5350;
+}
+
+.circleInfo #secondColor {
+  background-color: #ffa726;
+}
+
+.circleInfo #thirdColor {
+  background-color: #42a5f5;
 }
