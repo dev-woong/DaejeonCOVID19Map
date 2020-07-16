@@ -1,4 +1,5 @@
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
 .menu {
   width: 270px;
   height: 80%;
@@ -8,6 +9,9 @@
   z-index: 9999;
   margin: 20px;
   border-radius: 10px;
+  animation-fill-mode: both;
+  animation-iteration-count: initial;
+  animation-duration: 1s;
 }
 
 .menu__list {
@@ -104,7 +108,7 @@ input[type="checkbox"] {
   width: 260px;
   height: 100%;
   overflow-y: scroll;
-  background-color: green;
+  background-color: #42a5f5;
 
   /* 스크롤바 숨기기*/
   -ms-overflow-style: none; /* IE and Edge */
@@ -117,10 +121,29 @@ input[type="checkbox"] {
 }
 
 .people__view {
-  width: 400px;
+  width: 300px;
   height: 300px;
   /* position: absolute; */
   overflow: hidden;
+}
+
+.hideMenu {
+  position: fixed;
+  left: 285px;
+  top: 40%;
+  width: 30px;
+  height: 30px;
+  z-index: 9999;
+  animation-fill-mode: both;
+  animation-iteration-count: initial;
+  animation-duration: 1s;
+}
+
+.hideMenu label {
+  cursor: pointer;
+  display: flex;
+  padding: 10px 10px 10px 0px;
+  color: #0039cb;
 }
 
 .circleInfo {
@@ -174,4 +197,105 @@ input[type="checkbox"] {
 
 .circleInfo #thirdColor {
   background-color: #42a5f5;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 170px;
+  }
+  .menu__list,
+  .people__view,
+  .scrollBlind {
+    width: 160px;
+  }
+
+  .menu__list > li ul {
+    font-size: 14px;
+  }
+  .search__content {
+    display: block;
+    position: fixed;
+    top: 25px;
+    left: 200px;
+  }
+
+  .hideMenu {
+    left: 185px;
+    cursor: pointer;
+  }
+
+  .circleInfo {
+    width: 120px;
+    height: 100px;
+  }
+
+  .circleInfo > .explanation {
+    height: 15px;
+  }
+
+  .circleInfo p {
+    color: black;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .circleInfo li {
+    margin-top: 8px;
+  }
+
+  .circleInfo li p {
+    font-size: 12px;
+  }
+}
+
+@-webkit-keyframes hideMenu {
+  from {
+    left: 20px;
+  }
+  to {
+    left: -300px;
+  }
+}
+
+@-webkit-keyframes showMenu {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes bicScreenMoveLeftButton {
+  from {
+    left: 285px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-webkit-keyframes smallScreenMoveLeftButton {
+  from {
+    left: 185px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes bicScreenMoveRightButton {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 285px;
+  }
+}
+@-webkit-keyframes smallScreenMoveRightButton {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 185px;
+  }
 }

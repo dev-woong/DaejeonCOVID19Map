@@ -1,4 +1,3 @@
-document.getElementById("map").style.height = window.innerHeight - 20 + "px"
 let dirJson = ""
 if (
   location.hostname === "localhost" ||
@@ -31,6 +30,8 @@ let userOptions = {
     blue: "#42a5f5",
   },
 }
+
+document.getElementById("map").style.height = window.innerHeight - 20 + "px"
 //맵 생성
 let map = new kakao.maps.Map(container, options)
 
@@ -87,6 +88,27 @@ document.getElementById("btnSearch").onclick = function () {
   }
 }
 
+$("#hideMenu__checkbox").change(function () {
+  if ($("#hideMenu__checkbox").is(":checked")) {
+    $("#search__checkbox").prop("checked", true)
+    $(".menu").css("-webkit-animation-name", "hideMenu")
+    if (window.innerWidth > 768) {
+      $(".hideMenu").css("-webkit-animation-name", "bicScreenMoveLeftButton")
+    } else {
+      $(".hideMenu").css("-webkit-animation-name", "smallScreenMoveLeftButton")
+    }
+
+    console.log(window.innerWidth)
+  } else {
+    //   $(".s").css("-webkit-animation-name", "reverseDuration")
+    $(".menu").css("-webkit-animation-name", "showMenu")
+    if (window.innerWidth > 768) {
+      $(".hideMenu").css("-webkit-animation-name", "bicScreenMoveRightButton")
+    } else {
+      $(".hideMenu").css("-webkit-animation-name", "smallScreenMoveRightButton")
+    }
+  }
+})
 // document.getElementsByClassName("people__content")[0].onclick = function () {}
 
 $(function () {
