@@ -1,10 +1,22 @@
 document.getElementById("map").style.height = window.innerHeight - 20 + "px"
+let jsonData = $.getJSON("/data.json", function (data) {
+  return data
+})
 let container = document.getElementById("map")
 // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
-var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
+let infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
 let options = {
   center: new kakao.maps.LatLng(36.350439, 127.384851),
   level: 3,
+}
+
+let userOptions = {
+  circleSize: 200,
+  circleColor: {
+    red: "#ef5350",
+    orenge: "#ffa726",
+    blue: "#42a5f5",
+  },
 }
 //맵 생성
 let map = new kakao.maps.Map(container, options)
@@ -21,7 +33,7 @@ document.getElementById("btnSearch").onclick = function () {
   txtSearch = "대전 " + txtSearch
 
   // 장소 검색 객체를 생성합니다
-  var ps = new kakao.maps.services.Places()
+  let ps = new kakao.maps.services.Places()
 
   // 키워드로 장소를 검색합니다
   ps.keywordSearch(txtSearch, placesSearchCB)
@@ -31,9 +43,9 @@ document.getElementById("btnSearch").onclick = function () {
     if (status === kakao.maps.services.Status.OK) {
       // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
       // LatLngBounds 객체에 좌표를 추가합니다
-      var bounds = new kakao.maps.LatLngBounds()
+      let bounds = new kakao.maps.LatLngBounds()
 
-      for (var i = 0; i < data.length; i++) {
+      for (let i = 0; i < data.length; i++) {
         displayMarker(data[i])
         bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x))
       }
@@ -46,7 +58,7 @@ document.getElementById("btnSearch").onclick = function () {
   // 지도에 마커를 표시하는 함수입니다
   function displayMarker(place) {
     // 마커를 생성하고 지도에 표시합니다
-    var marker = new kakao.maps.Marker({
+    let marker = new kakao.maps.Marker({
       map: map,
       position: new kakao.maps.LatLng(place.y, place.x),
     })
@@ -61,3 +73,62 @@ document.getElementById("btnSearch").onclick = function () {
     })
   }
 }
+
+// document.getElementsByClassName("people__content")[0].onclick = function () {}
+
+$(function () {
+  let data = jsonData.responseJSON
+  console.log("data :", data)
+
+  // 주소-좌표 변환 객체를 생성합니다
+  let geocoder = new kakao.maps.services.Geocoder()
+
+  //확진자 번호
+  for (let i in data) {
+    console.log("confirmer : ", data[i].confirmer)
+    let elem = document.createElement("li")
+    elem.innerHTML = data[i].confirmer + "번"
+    document.getElementsByClassName("people__content")[0].append(elem)
+    for (let j in data[i].route) {
+      console.log("data.route[i] : ", data[i].route[j])
+      if (getPastTime(data[i].route[j].dateOfExposure[length + 1]) > 14) return false
+      let circleColor = getCircleColor(data[i].route[j].dateOfExposure[length + 1])
+      // 주소로 좌표를 검색합니다
+      geocoder.addressSearch("대전" + data[i].route[j].location, function (result, status) {
+        // 정상적으로 검색이 완료됐으면
+        if (status === kakao.maps.services.Status.OK) {
+          let coords = new kakao.maps.LatLng(result[0].y, result[0].x)
+
+          // 결과값으로 받은 위치를 마커로 표시합니다
+          let marker = new kakao.maps.Marker({
+            map: map,
+            position: coords,
+          })
+
+          // 인포윈도우로 장소에 대한 설명을 표시합니다
+          let infowindow = new kakao.maps.InfoWindow({
+            content:
+              '<div style="width:150px;text-align:center;padding:6px 0;">' +
+              data[i].route[j].mutual +
+              "</div>",
+          })
+          infowindow.open(map, marker)
+
+          // 지도에 표시할 원을 생성합니다
+          let circle = new kakao.maps.Circle({
+            center: coords, // 중심 좌표
+            radius: userOptions.circleSize, // 미터 단위의 원의 반지름입니다
+            strokeOpacity: 0, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+            fillColor: circleColor, // 채우기 색깔입니다
+            fillOpacity: 0.5, // 채우기 불투명도 입니다
+          })
+
+          // 지도에 원을 표시합니다
+          circle.setMap(map)
+          // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+          map.setCenter(coords)
+        }
+      })
+    }
+  }
+})

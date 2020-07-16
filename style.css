@@ -61,6 +61,7 @@
 .people__content,
 .option__content {
   display: none;
+  text-align: center;
 }
 
 input[type="checkbox"] {

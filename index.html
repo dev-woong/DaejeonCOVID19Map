@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/911b6a4098.js" crossorigin="anonymous"></script>
     <title>대전 코로나 확진자</title>
   </head>
@@ -29,11 +30,7 @@
             <span class="icon"><i class="fas fa-street-view fa-2x"></i></span>
             <p>확진자 정보</p>
           </label>
-          <ul class="people__content">
-            <li>확진자 내용 1</li>
-            <li>확진자 내용 2</li>
-            <li>확진자 내용 3</li>
-          </ul>
+          <ul class="people__content"></ul>
         </li>
         <li class="option">
           <input type="checkbox" id="option__checkbox" />
@@ -42,7 +39,7 @@
             <p>설정</p>
           </label>
           <ul class="option__content">
-            <li>설정 내용</li>
+            <li>추후 추가</li>
           </ul>
         </li>
       </div>
@@ -54,6 +51,7 @@
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6b02eed262926db60d747550ed222b70&libraries=services,clusterer,drawing"
     ></script>
+    <script src="func.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
