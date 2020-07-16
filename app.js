@@ -140,7 +140,14 @@ $(function () {
           kakao.maps.event.addListener(marker, "click", function () {
             // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
             infowindow.setContent(
-              '<div style="padding:5px;font-size:12px;">' + data[i].route[j].mutual + "</div>"
+              '<div style="padding:5px;font-size:12px;">' +
+                data[i].confirmer +
+                "번 " +
+                "<br/>" +
+                data[i].route[j].dateOfExposure[length] +
+                "<br/>" +
+                data[i].route[j].mutual +
+                "</div>"
             )
             infowindow.open(map, marker)
           })
