@@ -1,5 +1,15 @@
 document.getElementById("map").style.height = window.innerHeight - 20 + "px"
-let jsonData = $.getJSON("/data.json", function (data) {
+let dirJson = ""
+if (
+  location.hostname === "localhost" ||
+  location.hostname === "127.0.0.1" ||
+  location.hostname === ""
+) {
+  dirJson = "/data.json"
+} else {
+  dirJson = "/DeajeonCOVID19Map/data.json"
+}
+let jsonData = $.getJSON(dirJson, function (data) {
   return data
 })
 let container = document.getElementById("map")
