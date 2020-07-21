@@ -60,6 +60,10 @@ $("#hideMenu__checkbox").change(function () {
   }
 })
 
+kakao.maps.event.addListener(map, "click", function (mouseEvent) {
+  infowindow.close()
+})
+
 $(function () {
   let data = jsonData.responseJSON
   let reverseData = data.reverse()
