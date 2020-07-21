@@ -2,7 +2,7 @@
 
 .menu {
   width: 270px;
-  height: 80%;
+  height: 420px;
   background-color: #f0f0f0;
   opacity: 100%;
   position: fixed;
@@ -12,7 +12,7 @@
   animation-fill-mode: both;
   animation-iteration-count: initial;
   animation-duration: 1s;
-  box-shadow: 10px 5px darkgray;
+  box-shadow: 5px 2px darkgray;
 }
 
 .menu:before {
@@ -24,14 +24,14 @@
   border-radius: 0px 40px 40px 0px;
   background-color: #f0f0f0;
   position: absolute;
-  box-shadow: 5px 1px darkgray;
+  box-shadow: 3px 1px darkgray;
   cursor: pointer;
 }
 
 .menu__list {
   position: relative;
   width: 260px;
-  height: 80%;
+  height: 410px;
   left: 5px;
   top: 5px;
   background-color: white;
@@ -73,8 +73,8 @@
   padding: 20px;
 }
 
-.search__content {
-  display: flex;
+.menu__list > li ul > li:hover {
+  cursor: pointer;
 }
 
 .people__view,
@@ -83,13 +83,13 @@
   text-align: center;
 }
 
+#option {
+  display: none;
+}
+
 input[type="checkbox"] {
   position: fixed;
   left: -9999px;
-}
-
-#search__checkbox:checked ~ .search__content {
-  display: none;
 }
 
 #people__checkbox:checked ~ .people__view {
@@ -98,25 +98,6 @@ input[type="checkbox"] {
 
 #option__checkbox:checked ~ .option__content {
   display: block;
-}
-
-.search__content input[type="text"] {
-  padding: 6px 0px 6px 6px;
-  margin: 8px 0px 8px 4px;
-  font-size: 17px;
-  border: none;
-  border-color: #3396ff;
-}
-
-.search__content button {
-  float: right;
-  padding: 6px 5px;
-  margin-top: 8px;
-  background: white;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-  color: gray;
 }
 
 .scrollBlind {
@@ -137,7 +118,7 @@ input[type="checkbox"] {
 
 .people__view {
   width: 300px;
-  height: 300px;
+  height: 350px;
   /* position: absolute; */
   overflow: hidden;
 }
@@ -223,16 +204,6 @@ input[type="checkbox"] {
 
   .menu__list > li ul {
     font-size: 14px;
-  }
-  .search__content {
-    display: block;
-    position: fixed;
-    top: 25px;
-    left: 200px;
-  }
-
-  .search__content input[type="text"] {
-    font-size: 12px;
   }
 
   .menu__list > li ul > li {
