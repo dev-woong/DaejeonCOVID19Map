@@ -31,6 +31,8 @@ let userOptions = {
   },
 }
 
+let PAGE_COUNT = 1
+
 let arrPeopleList = []
 
 document.getElementById("map").style.height = window.innerHeight - 20 + "px"
@@ -71,7 +73,20 @@ $(".people__info").click(function () {
 })
 
 $(".info__content").click(function () {
-  console.log(this.value)
+  if (PAGE_COUNT === 1) {
+    $(".page1").css("display", "none")
+    $(".page2").css("display", "block")
+    PAGE_COUNT++
+  } else if (PAGE_COUNT === 2) {
+    $(".page2").css("display", "none")
+    $(".page3").css("display", "block")
+    PAGE_COUNT++
+  } else {
+    $(".page3").css("display", "none")
+    $(".page1").css("display", "block")
+    PAGE_COUNT = 1
+    $(".info__content").toggle()
+  }
 })
 
 $(function () {

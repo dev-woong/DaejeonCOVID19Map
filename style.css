@@ -212,59 +212,6 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.circleInfo {
-  position: fixed;
-  right: 0px;
-  bottom: 0px;
-  width: 180px;
-  height: 150px;
-  border-radius: 20px;
-  background-color: white;
-  z-index: 10000;
-  font-family: "Jeju Gothic", sans-serif;
-}
-
-.circleInfo > .explanation {
-  top: 10px;
-  width: 100%;
-  height: 30px;
-  text-align: center;
-}
-
-.circleInfo p {
-  color: black;
-  margin-top: 10px;
-}
-
-.circleInfo li {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.circleInfo li p {
-  margin: 0;
-}
-
-.circleInfo .circleColor {
-  width: 15px;
-  height: 15px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-.circleInfo #firstColor {
-  background-color: #ef5350;
-}
-
-.circleInfo #secondColor {
-  background-color: #ffa726;
-}
-
-.circleInfo #thirdColor {
-  background-color: #42a5f5;
-}
-
 @media screen and (max-width: 768px) {
   .menu {
     width: 170px;
@@ -287,31 +234,18 @@ input[type="checkbox"] {
     padding: 15px;
   }
 
+  .info__content {
+    right: -185px;
+    width: 165px;
+    height: 200px;
+  }
+
+  .info__content font {
+    font-size: 10px;
+  }
+
   .hideMenu {
     left: 170px;
-  }
-
-  .circleInfo {
-    width: 120px;
-    height: 100px;
-  }
-
-  .circleInfo > .explanation {
-    height: 15px;
-  }
-
-  .circleInfo p {
-    color: black;
-    margin-top: 5px;
-    font-size: 14px;
-  }
-
-  .circleInfo li {
-    margin-top: 8px;
-  }
-
-  .circleInfo li p {
-    font-size: 12px;
   }
 }
 
