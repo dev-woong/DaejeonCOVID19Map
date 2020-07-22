@@ -6,7 +6,7 @@ if (
 ) {
   dirJson = "/data.json"
 } else {
-  dirJson = "/DeajeonCOVID19Map/data.json"
+  dirJson = "/DaejeonCOVID19Map/data.json"
 }
 $.ajaxSetup({
   async: false,
