@@ -60,8 +60,18 @@ $("#hideMenu__checkbox").change(function () {
   }
 })
 
+//맵 클릭했을 때 이벤트
+// 마커정보 끔
 kakao.maps.event.addListener(map, "click", function (mouseEvent) {
   infowindow.close()
+})
+
+$(".people__info").click(function () {
+  $(".info__content").toggle()
+})
+
+$(".info__content").click(function () {
+  console.log(this.value)
 })
 
 $(function () {
