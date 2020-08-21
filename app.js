@@ -23,6 +23,7 @@ let circleList = new Map()
 
 let userOptions = {
   circleSize: 200,
+  maxDate: 365,
   circleColor: {
     red: "#ef5350",
     orenge: "#ffa726",
@@ -124,7 +125,8 @@ $(function () {
   //확진자 번호
   for (let i in data) {
     for (let j in data[i].route) {
-      if (getPastTime(data[i].route[j].dateOfExposure[length + 1]) > 30) return false
+      if (getPastTime(data[i].route[j].dateOfExposure[length + 1]) > userOptions.maxDate)
+        return false
       let circleColor = getCircleColor(data[i].route[j].dateOfExposure[length + 1])
       // 주소로 좌표를 검색합니다
       geocoder.addressSearch("대전" + data[i].route[j].location, function (result, status) {

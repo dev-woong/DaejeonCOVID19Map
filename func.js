@@ -25,6 +25,7 @@ let getPastTime = (data) => {
 
 //확진자 정보를 눌렀을 때
 function clickPeopleContent() {
+  console.log("click")
   let id = this.id
   let value = this.value
   let num = id.substring(4)
@@ -42,7 +43,7 @@ function clickPeopleContent() {
       map.panTo(bounds)
     }
   }
-
+  // 클릭
   if (value % 2 === 1) {
     $("#" + this.id).css("background-color", "white")
     if (num !== "0") {
@@ -58,6 +59,7 @@ function clickPeopleContent() {
         i++
       }
     }
+    // 클릭 해제
   } else {
     $("#" + this.id).css("background-color", " #ffbb93")
     if (num !== "0") {
