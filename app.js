@@ -128,6 +128,7 @@ $(function () {
       if (getPastTime(data[i].route[j].dateOfExposure[length + 1]) > userOptions.maxDate)
         return false
       let circleColor = getCircleColor(data[i].route[j].dateOfExposure[length + 1])
+      console.log("circleColor : ", circleColor)
       // 주소로 좌표를 검색합니다
       geocoder.addressSearch("대전" + data[i].route[j].location, function (result, status) {
         // 정상적으로 검색이 완료됐으면
@@ -174,6 +175,9 @@ $(function () {
 
           circleList.set(data[i].confirmer + "_" + j, circle)
           circle.setMap(null)
+
+          console.log("확진자 번호 : ", data[i].confirmer)
+          console.log("색상 : ", circleColor)
         }
       })
     }

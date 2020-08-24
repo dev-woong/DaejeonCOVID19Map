@@ -43,7 +43,7 @@ function clickPeopleContent() {
       map.panTo(bounds)
     }
   }
-  // 클릭
+  // 클릭 해제
   if (value % 2 === 1) {
     $("#" + this.id).css("background-color", "white")
     if (num !== "0") {
@@ -59,7 +59,7 @@ function clickPeopleContent() {
         i++
       }
     }
-    // 클릭 해제
+    // 클릭
   } else {
     $("#" + this.id).css("background-color", " #ffbb93")
     if (num !== "0") {

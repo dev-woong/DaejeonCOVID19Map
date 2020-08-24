@@ -1,7 +1,7 @@
 [
   {
     "confirmer": "143",
-    "infectionDate": "2019-07-07",
+    "infectionDate": "2020-07-07",
     "place": "서구(정림동)",
     "route": [
       {
@@ -26,7 +26,7 @@
   },
   {
     "confirmer": "144",
-    "infectionDate": "2019-07-07",
+    "infectionDate": "2020-07-07",
     "place": "중구(문화동)",
     "route": [
       {
@@ -51,7 +51,7 @@
   },
   {
     "confirmer": "145",
-    "infectionDate": "2019-07-07",
+    "infectionDate": "2020-07-07",
     "place": "중구(문화동)",
     "route": [
       {
@@ -82,7 +82,7 @@
   },
   {
     "confirmer": "147",
-    "infectionDate": "2019-07-08",
+    "infectionDate": "2020-07-08",
     "place": "유성구(원내동)",
     "route": [
       {
@@ -95,7 +95,7 @@
   },
   {
     "confirmer": "148",
-    "infectionDate": "2019-07-08",
+    "infectionDate": "2020-07-08",
     "place": "유성구(원내동)",
     "route": [
       {
@@ -108,7 +108,7 @@
   },
   {
     "confirmer": "149",
-    "infectionDate": "2019-07-08",
+    "infectionDate": "2020-07-08",
     "place": "서구(월평동)",
     "route": [
       {
@@ -132,7 +132,7 @@
   },
   {
     "confirmer": "151",
-    "infectionDate": "2019-07-08",
+    "infectionDate": "2020-07-08",
     "place": "중구(문화동)",
     "route": [
       {
@@ -145,7 +145,7 @@
   },
   {
     "confirmer": "152",
-    "infectionDate": "2019-07-09",
+    "infectionDate": "2020-07-09",
     "place": "중구(산성동)",
     "route": [
       {
@@ -164,7 +164,7 @@
   },
   {
     "confirmer": "153",
-    "infectionDate": "2019-07-09",
+    "infectionDate": "2020-07-09",
     "place": "중구(대흥동)",
     "route": [
       {
@@ -183,7 +183,7 @@
   },
   {
     "confirmer": "154",
-    "infectionDate": "2019-07-09",
+    "infectionDate": "2020-07-09",
     "place": "중구(대사동)",
     "route": [
       {
@@ -202,7 +202,7 @@
   },
   {
     "confirmer": "155",
-    "infectionDate": "2019-07-09",
+    "infectionDate": "2020-07-09",
     "place": "중구(오류동)",
     "route": [
       {
@@ -221,7 +221,7 @@
   },
   {
     "confirmer": "159",
-    "infectionDate": "2019-07-11",
+    "infectionDate": "2020-07-11",
     "place": "유성구(원내동)",
     "route": [
       {
@@ -234,7 +234,7 @@
   },
   {
     "confirmer": "161",
-    "infectionDate": "2019-07-14",
+    "infectionDate": "2020-07-14",
     "place": "유성구(봉명동)",
     "route": [
       {
@@ -253,7 +253,7 @@
   },
   {
     "confirmer": "164",
-    "infectionDate": "2019-07-15",
+    "infectionDate": "2020-07-15",
     "place": "유성구(봉명동)",
     "route": [
       {
@@ -266,7 +266,7 @@
   },
   {
     "confirmer": "176",
-    "infectionDate": "2019-08-19",
+    "infectionDate": "2020-08-19",
     "place": "서구(갈마동)",
     "route": [
       {
@@ -286,6 +286,361 @@
         "mutual": "장가네갈비김치찌개 (갈마동)",
         "location": "서구 만년로67번길 18-9",
         "dateOfExposure": ["2020-08-18 15:30"]
+      }
+    ]
+  },
+  {
+    "confirmer": "186",
+    "infectionDate": "2020-08-20",
+    "place": "서구(갈마동)",
+    "route": [
+      {
+        "type": "음식점",
+        "mutual": "청원농장 (사정동)",
+        "location": "중구 사정공원로 207",
+        "dateOfExposure": ["2020-08-15 21:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "190",
+    "infectionDate": "2020-08-21",
+    "place": "서구(갈마동)",
+    "route": [
+      {
+        "type": "체육시설",
+        "mutual": "인동생활체육관 배드민턴장 (인동)",
+        "location": "동구 대전로 669-13",
+        "dateOfExposure": ["2020-08-19 10:00", "2020-08-20 10:00", "2020-08-21 09:30"]
+      }
+    ]
+  },
+  {
+    "confirmer": "191",
+    "infectionDate": "2020-08-21",
+    "place": "중구(태평동)",
+    "route": [
+      {
+        "type": "체육시설",
+        "mutual": "인동생활체육관 배드민턴장 (인동)",
+        "location": "동구 대전로 669-13",
+        "dateOfExposure": ["2020-08-19 10:00", "2020-08-20 10:00", "2020-08-21 09:30"]
+      }
+    ]
+  },
+  {
+    "confirmer": "192",
+    "infectionDate": "2020-08-21",
+    "place": "경기도 광명시(중구)",
+    "route": [
+      {
+        "type": "체육시설",
+        "mutual": "인동생활체육관 배드민턴장 (인동)",
+        "location": "동구 대전로 669-13",
+        "dateOfExposure": ["2020-08-19 10:00", "2020-08-21 08:00"]
+      },
+      {
+        "type": "음식점",
+        "mutual": "실내포차 경희네 (탄방동)",
+        "location": "서구 탄방로7번길 13",
+        "dateOfExposure": ["2020-08-19 21:59"]
+      },
+      {
+        "type": "마트",
+        "mutual": "보문할인마트 (대사동)",
+        "location": "중구 보문산공원로 539",
+        "dateOfExposure": ["2020-08-20 17:10"]
+      }
+    ]
+  },
+  {
+    "confirmer": "194",
+    "infectionDate": "2020-08-21",
+    "place": "대덕구(송촌동)",
+    "route": [
+      {
+        "type": "의료기관",
+        "mutual": "미래신경정신과 (중리동)",
+        "location": "대덕구 계족산로 2 조은클리닉",
+        "dateOfExposure": ["2020-08-19 15:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "195",
+    "infectionDate": "2020-08-21",
+    "place": "서구(가수원동)",
+    "route": [
+      {
+        "type": "체육시설",
+        "mutual": "국민체육센터 헬스장 (정림동)",
+        "location": "서구 정림서로 181",
+        "dateOfExposure": ["2020-08-19 07:40", "2020-08-20 07:40"]
+      }
+    ]
+  },
+  {
+    "confirmer": "199",
+    "infectionDate": "2020-08-22",
+    "place": "유성구(봉명동)",
+    "route": [
+      {
+        "type": "사우나",
+        "mutual": "유성온천불가마사우나 (봉명동)",
+        "location": "유성구 계룡로113번길 76",
+        "dateOfExposure": ["2020-08-15 22:30"]
+      }
+    ]
+  },
+  {
+    "confirmer": "200",
+    "infectionDate": "2020-08-22",
+    "place": "유성구(송강동)",
+    "route": [
+      {
+        "type": "음식점",
+        "mutual": "한점승부 (관평동)",
+        "location": "유성구 관들2길 72-12",
+        "dateOfExposure": ["2020-08-18 20:00"]
+      },
+      {
+        "type": "음식점",
+        "mutual": "역전할머니맥주 (관평동)",
+        "location": "유성구 관들2길 8-32",
+        "dateOfExposure": ["2020-08-18 22:00"]
+      },
+      {
+        "type": "커피숍",
+        "mutual": "아임일리터 (관평동)",
+        "location": "유성구 관들2로 26",
+        "dateOfExposure": ["2020-08-18 23:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "204",
+    "infectionDate": "2020-08-22",
+    "place": "서구(가수원동)",
+    "route": [
+      {
+        "type": "사우나",
+        "mutual": "킹스파 (관평동)",
+        "location": "유성구 테크노1로 12-14",
+        "dateOfExposure": ["2020-08-18 16:50"]
+      },
+      {
+        "type": "음식점",
+        "mutual": "메밀제면소 (가수원동)",
+        "location": "서구 도안동로31번길 13",
+        "dateOfExposure": ["2020-08-20 19:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "205",
+    "infectionDate": "2020-08-22",
+    "place": "서구(가수원동)",
+    "route": [
+      {
+        "type": "음식점",
+        "mutual": "픽션브라보 (관저동)",
+        "location": "서구 관저동로105번길 23",
+        "dateOfExposure": ["2020-08-18 22:10"]
+      },
+      {
+        "type": "음식점",
+        "mutual": "백그릇국밥 (월평동)",
+        "location": "서구 청사로123번길 37",
+        "dateOfExposure": ["2020-08-19 19:00"]
+      },
+      {
+        "type": "서점",
+        "mutual": "교보문고 대전점 (둔산동)",
+        "location": "서구 대덕대로 226 명동프라자",
+        "dateOfExposure": ["2020-08-19 21:30"]
+      }
+    ]
+  },
+  {
+    "confirmer": "210",
+    "infectionDate": "2020-08-22",
+    "place": "대덕구(송촌동)",
+    "route": [
+      {
+        "type": "미용실",
+        "mutual": "아름다운미용실 (송촌동)",
+        "location": "대덕구 송촌로 31",
+        "dateOfExposure": ["2020-08-20 18:00", "2020-08-21 18:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "212",
+    "infectionDate": "2020-08-22",
+    "place": "대덕구(송촌동)",
+    "route": [
+      {
+        "type": "체육시설",
+        "mutual": "인동생활체육관 배드민턴장 (인동)",
+        "location": "동구 대전로 669-13",
+        "dateOfExposure": ["2020-08-19 12:00", "2020-08-21 12:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "213",
+    "infectionDate": "2020-08-23",
+    "place": "유성구(장대동)",
+    "route": [
+      {
+        "type": "음식점",
+        "mutual": "김가네김밥 충남대학교병원점(대사동)",
+        "location": "중구 문화로 277",
+        "dateOfExposure": ["2020-08-12 12:40"]
+      }
+    ]
+  },
+  {
+    "confirmer": "215",
+    "infectionDate": "2020-08-23",
+    "place": "중구(선화동)",
+    "route": [
+      {
+        "type": "의료기관",
+        "mutual": "성모내과의원(갈마동)",
+        "location": "서구 신갈마로 118",
+        "dateOfExposure": ["2020-08-20 09:00"]
+      },
+      {
+        "type": "약국",
+        "mutual": "인과원약국(갈마동)",
+        "location": "서구 신갈마로 120",
+        "dateOfExposure": ["2020-08-20 09:05"]
+      },
+      {
+        "type": "체육시설",
+        "mutual": "중구국민체육센터 내 수영장(선화동)",
+        "location": "중구 선화서로 70",
+        "dateOfExposure": ["2020-08-21 10:00"]
+      },
+      {
+        "type": "음식점",
+        "mutual": "왔다삼겹살24시(선화동)",
+        "location": "중구 중앙로121번길 61",
+        "dateOfExposure": ["2020-08-22 21:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "216",
+    "infectionDate": "2020-08-23",
+    "place": "유성구(원내동)",
+    "route": [
+      {
+        "type": "공공기관",
+        "mutual": "대전광역시청 기자실(둔산동, 9층)",
+        "location": "서구 둔산로 100",
+        "dateOfExposure": ["2020-08-14 12:00", "2020-08-18 17:00"]
+      },
+      {
+        "type": "영화관",
+        "mutual": "CGV유성노은(지족동, 7층)",
+        "location": "유성구 노은로 144",
+        "dateOfExposure": ["2020-08-16 20:50"]
+      },
+      {
+        "type": "공공기관",
+        "mutual": "대전광역시의회 기자실(둔산동, 1층)",
+        "location": "서구 둔산로 100",
+        "dateOfExposure": ["2020-08-18 12:00"]
+      },
+      {
+        "type": "공공기관",
+        "mutual": "대전광역시 교육청 기자실(둔산동, 4층)",
+        "location": "서구 둔산로 89",
+        "dateOfExposure": ["2020-08-14 18:00", "2020-08-18 13:00", "2020-08-14 17:00"]
+      },
+      {
+        "type": "공공기관",
+        "mutual": "대전광역시 교육청 구내식당",
+        "location": "서구 둔산로 89",
+        "dateOfExposure": ["2020-08-18 11:40"]
+      },
+      {
+        "type": "예식장",
+        "mutual": "오페라웨딩&컨벤션홀(탄방동)",
+        "location": "서구 둔산남로 50",
+        "dateOfExposure": ["2020-08-18 15:10"]
+      },
+      {
+        "type": "의료기관",
+        "mutual": "참좋은이비인후과의원(관저동, 5층)",
+        "location": "서구 구봉로 121",
+        "dateOfExposure": ["2020-08-20 08:30", "2020-08-21 08:30", "2020-08-22 08:30"]
+      },
+      {
+        "type": "종교시설",
+        "mutual": "한밭제일장로교회(원내동)",
+        "location": "유성구 계백로 913",
+        "dateOfExposure": ["2020-08-20 17:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "217",
+    "infectionDate": "2020-08-23",
+    "place": "유성구(하기동)",
+    "route": [
+      {
+        "type": "사우나",
+        "mutual": "유성온천불가마사우나(봉명동)",
+        "location": "유성구 계룡로113번길 76",
+        "dateOfExposure": ["2020-08-17 10:54", "2020-08-21 22:32"]
+      },
+      {
+        "type": "의료기관",
+        "mutual": "윤마취통의학과의원(둔산동, 4층)",
+        "location": "서구 둔산중로 38 둔산메트로존",
+        "dateOfExposure": ["2020-08-18 17:30"]
+      }
+    ]
+  },
+  {
+    "confirmer": "218",
+    "infectionDate": "2020-08-23",
+    "place": "대덕구(송촌동)",
+    "route": [
+      {
+        "type": "복지시설",
+        "mutual": "비래골 경로당(비래동)",
+        "location": "대덕구 비래골길 47-8",
+        "dateOfExposure": ["2020-08-22 09:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "219",
+    "infectionDate": "2020-08-23",
+    "place": "대덕구(송촌동)",
+    "route": [
+      {
+        "type": "복지시설",
+        "mutual": "서오아파트 경로당(송촌동)",
+        "location": "대덕구 동춘당로23번길 13",
+        "dateOfExposure": ["2020-08-20 18:20", "2020-08-21 17:00"]
+      }
+    ]
+  },
+  {
+    "confirmer": "221",
+    "infectionDate": "2020-08-24",
+    "place": "유성구(원내동)",
+    "route": [
+      {
+        "type": "사우나",
+        "mutual": "유성온천불가마사우나(봉명동)",
+        "location": "유성구 계룡로113번길 76",
+        "dateOfExposure": ["2020-08-21 23:00"]
       }
     ]
   }
